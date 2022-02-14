@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TicTacToe_cs
+﻿namespace TicTacToe_cs
 {
     internal class Player
     {
@@ -36,6 +30,7 @@ namespace TicTacToe_cs
                 {
                     squares[choice] = Current;
                     return;
+
                 }
             }
         }
