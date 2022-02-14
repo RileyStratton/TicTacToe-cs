@@ -1,11 +1,13 @@
-﻿namespace TicTacToe_cs
+﻿using Autodesk.AutoCAD.Runtime;
+
+namespace TicTacToe_cs
 {
     class TicTacToe 
     {
+
         static void Main()
-        {
+        {   
             Board board = new Board();
-            //BoardCAD board = new BoardCAD();
             Player player = new Player();
 
             for (int i = 1; i <= 9; i++)
@@ -18,5 +20,6 @@
 
             board.DisplayTie();
         }
+
     }
 }
