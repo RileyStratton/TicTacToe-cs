@@ -39,6 +39,6 @@
 //int age = Convert.ToInt32(Console.ReadLine());
 //Console.WriteLine("Your age doubled is: " + (age * 2));
 
-string first_name = "Riley";
-string last_name = "Stratton";
-Console.WriteLine($"My full name is {first_name} {last_name}");
+//string first_name = "Riley";
+//string last_name = "Stratton";
+//Console.WriteLine($"My full name is {first_name} {last_name}");
