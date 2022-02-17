@@ -1,4 +1,6 @@
-﻿namespace TicTacToe_cs
+﻿
+
+namespace TicTacToe_cs
 {
     internal class Board
     {

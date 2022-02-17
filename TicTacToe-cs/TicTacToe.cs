@@ -1,12 +1,11 @@
-﻿using Autodesk.AutoCAD.Runtime;
+﻿
 
 namespace TicTacToe_cs
 {
-    class TicTacToe 
+    class TicTacToe
     {
-
         static void Main()
-        {   
+        {
             Board board = new Board();
             Player player = new Player();
 
