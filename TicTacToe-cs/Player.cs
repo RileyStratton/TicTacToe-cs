@@ -5,12 +5,11 @@ namespace TicTacToe_cs
     internal class Player
     {
         
-        public char Current = 'X';
-        
+        public char current = 'X';
 
         public void TakeTurn(char[] squares)
         {
-            Console.WriteLine("Player " + Current + "'s turn.");
+            Console.WriteLine("Player " + current + "'s turn.");
 
             int choice;
             while (true)
@@ -30,7 +29,7 @@ namespace TicTacToe_cs
 
                 else if (squares[choice] == Convert.ToChar(Convert.ToString(choice)))
                 {
-                    squares[choice] = Current;
+                    squares[choice] = current;
                     return;
 
                 }
@@ -39,8 +38,8 @@ namespace TicTacToe_cs
 
         public void SwitchPlayer()
         {
-            if (Current == 'X') { Current = 'O'; }
-            else if (Current == 'O') { Current = 'X'; }
+            if (current == 'X') { current = 'O'; }
+            else if (current == 'O') { current = 'X'; }
         }
     }
 }

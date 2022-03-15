@@ -5,43 +5,42 @@ namespace TicTacToe_cs
     internal class Board
     {
 
-        public char[] Squares = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' };
-
+        public char[] squares = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' };
 
         public void DisplayBoard()
         {
             Console.WriteLine();
-            Console.WriteLine(" " + Squares[1] + " | " + Squares[2] + " | " + Squares[3] + " ");
-            Console.WriteLine("--- --- ---");
-            Console.WriteLine(" " + Squares[4] + " | " + Squares[5] + " | " + Squares[6] + " ");
-            Console.WriteLine("--- --- ---");
-            Console.WriteLine(" " + Squares[7] + " | " + Squares[8] + " | " + Squares[9] + " ");
+            Console.WriteLine(" " + squares[1] + " | " + squares[2] + " | " + squares[3] + " ");
+            Console.WriteLine("---+---+---");
+            Console.WriteLine(" " + squares[4] + " | " + squares[5] + " | " + squares[6] + " ");
+            Console.WriteLine("---+---+---");
+            Console.WriteLine(" " + squares[7] + " | " + squares[8] + " | " + squares[9] + " ");
             Console.WriteLine();
         }
 
-        public bool WinCheck(char Current)
+        public bool WinCheck(char current)
         {
-            if (Squares[1] == Current & Squares[2] == Current & Squares[3] == Current) { return true; }
-            else if (Squares[4] == Current & Squares[5] == Current & Squares[6] == Current) { return true; }
-            else if (Squares[7] == Current & Squares[8] == Current & Squares[9] == Current) { return true; }
+            if (squares[1] == current & squares[2] == current & squares[3] == current) { return true; }
+            else if (squares[4] == current & squares[5] == current & squares[6] == current) { return true; }
+            else if (squares[7] == current & squares[8] == current & squares[9] == current) { return true; }
 
             // Vertical win conditions
-            else if (Squares[1] == Current & Squares[4] == Current & Squares[7] == Current) { return true; }
-            else if (Squares[2] == Current & Squares[5] == Current & Squares[8] == Current) { return true; }
-            else if (Squares[3] == Current & Squares[6] == Current & Squares[9] == Current) { return true; }
+            else if (squares[1] == current & squares[4] == current & squares[7] == current) { return true; }
+            else if (squares[2] == current & squares[5] == current & squares[8] == current) { return true; }
+            else if (squares[3] == current & squares[6] == current & squares[9] == current) { return true; }
 
             // Diagonal win conditions
-            else if (Squares[1] == Current & Squares[5] == Current & Squares[9] == Current) { return true; }
-            else if (Squares[3] == Current & Squares[5] == Current & Squares[7] == Current) { return true; }
+            else if (squares[1] == current & squares[5] == current & squares[9] == current) { return true; }
+            else if (squares[3] == current & squares[5] == current & squares[7] == current) { return true; }
 
             // No win conditions
             else { return false; }
         }
 
-        public void DisplayWinner(char Current)
+        public void DisplayWinner(char current)
         {
             DisplayBoard();
-            Console.WriteLine("Player " + Current + " wins!");
+            Console.WriteLine("Player " + current + " wins!");
         }
 
         public void DisplayTie()
